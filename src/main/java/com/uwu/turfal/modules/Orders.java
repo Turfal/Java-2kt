@@ -4,13 +4,13 @@ package com.uwu.turfal.modules;
 import jakarta.persistence.*;
 
 @Entity
-public class Waybill {
+public class Orders {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String shipmentDetails;
+    private String orderDetails;
 
     // Getters and setters
 

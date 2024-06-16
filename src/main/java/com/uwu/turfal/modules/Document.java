@@ -15,12 +15,6 @@ public class Document {
 
     private String documentName;
     private String documentDescription;
-    private String name;
-    private String lastname;
-    private String number;
-    private String address;
-    private String email;
-
 
     @PrePersist
     protected void onCreate() {
@@ -58,46 +52,6 @@ public class Document {
         this.documentDescription = documentDescription;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getDocumentContent() {
         return documentContent;
     }
@@ -112,5 +66,9 @@ public class Document {
 
     public void setCreatedAt(LocalDate createdAtDate) {
         this.createdAt = createdAtDate.atStartOfDay();
+    }
+
+    public Long getCustomerId() {
+        return id;
     }
 }
